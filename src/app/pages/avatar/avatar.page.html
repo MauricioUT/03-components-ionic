@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary"></ion-back-button><!--para regresar si hay pestaña anterior si no a la de inicio y salga el boton pde back si se recarga la vista-->
+    </ion-buttons>
+    <ion-title color="primary">avatar</ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <!--<img src="/assets/stan-lee.jpg">--><!--El path es relativo a la raiz del proyecto, se usa el img cuando se quiera cargar el recurso desde el inicio de la pagina o componente-->
+        <ion-img [src]="'/assets/stan-lee.jpg'"></ion-img><!--Se carga mediante LazyLoad el ion-img es decir se carga bajo demanda, es mas eficiente usarlo así-->
+      </ion-avatar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-chip color="primary" outline="true" *ngFor="let item of [1,1,1,1,1,1]"><!--Al colocar el mode ="ios", se le esta indicando que tome siempre ese estilo, y outline="true" establece si solo se quiere ver los bordes-->
+    <ion-label>Default</ion-label>
+    <ion-avatar>
+      <ion-img [src]="'/assets/stan-lee.jpg'"></ion-img>
+    </ion-avatar>
+  </ion-chip>
+
+  <ion-list>
+    <ion-item *ngFor="let item of [1,1,1,1,1,1]">
+      <ion-label>Stan Lee</ion-label>
+      <ion-avatar slot="end">
+        <ion-img [src]="'/assets/stan-lee.jpg'"></ion-img>
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+</ion-content>
