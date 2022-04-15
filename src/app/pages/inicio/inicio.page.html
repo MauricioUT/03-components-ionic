@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let componente of componentes" [routerLink]="componente.redirectTo" detail="true"><!--con detail = 'true' o solo detail, hace que le agregue una flecha al final que indica que se puede clickera, ios lo incluye por default-->
+      <ion-icon slot="start" [name]="componente.icon"></ion-icon>
+      <ion-label>
+        {{componente.name}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
