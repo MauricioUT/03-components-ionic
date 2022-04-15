@@ -24,3 +24,7 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.rojo, .rojo .sc-ion-action-sheet-md{ // para aplicar un estilo en material desing ya que en ios lo tiene aplicado
+    color: red !important;
+}
