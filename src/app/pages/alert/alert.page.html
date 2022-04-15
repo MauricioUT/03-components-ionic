@@ -1,4 +1,25 @@
-<app-headers titulo = "Alert"></app-headers>
+<app-headers titulo="Alert"></app-headers>
 <ion-content>
+    <ion-button (click)="onClick()" expand="block">
+        Alerta
+    </ion-button>
+    <ion-button (click)="presentAlertMultipleButtons()" expand="block">
+        Alerta MultiButtons
+    </ion-button>
 
+    <ion-button (click)="presentAlertConfirm()" expand="block">
+        Alerta presentAlertConfirm
+    </ion-button>
+
+    <ion-button (click)="presentAlertPrompt()" expand="block">
+        Alerta presentAlertPrompt
+    </ion-button>
+
+    <ion-button (click)="presentAlertRadio()" expand="block">
+        Alerta presentAlertRadio
+    </ion-button>
+
+    <ion-button (click)="presentAlertCheckbox()" expand="block">
+        Alerta presentAlertCheckbox
+    </ion-button>
 </ion-content>
