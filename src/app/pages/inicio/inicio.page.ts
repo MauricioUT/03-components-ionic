@@ -20,7 +20,8 @@ export class InicioPage implements OnInit {
     { icon: 'radio-button-off-outline', name: 'Botones', redirectTo: '/botones' },
     { icon: 'card-outline', name: 'Card', redirectTo: '/card' },
     { icon: 'checkmark-circle-outline', name: 'Checks', redirectTo: '/check' },
-    { icon: 'calendar-outline', name: 'Date Tame', redirectTo: '/date-tame' }
+    { icon: 'calendar-outline', name: 'Date Tame', redirectTo: '/date-tame' },
+    { icon: 'car-outline', name: 'Fab', redirectTo: '/fab' }
   ]
 
   constructor() { }

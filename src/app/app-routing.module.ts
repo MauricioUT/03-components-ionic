@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'date-tame',
     loadChildren: () => import('./pages/date-tame/date-tame.module').then( m => m.DateTamePageModule)
   },
+  {
+    path: 'fab',
+    loadChildren: () => import('./pages/fab/fab.module').then( m => m.FabPageModule)
+  },
 
 ];
 
