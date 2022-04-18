@@ -21,7 +21,9 @@ export class InicioPage implements OnInit {
     { icon: 'card-outline', name: 'Card', redirectTo: '/card' },
     { icon: 'checkmark-circle-outline', name: 'Checks', redirectTo: '/check' },
     { icon: 'calendar-outline', name: 'Date Tame', redirectTo: '/date-tame' },
-    { icon: 'car-outline', name: 'Fab', redirectTo: '/fab' }
+    { icon: 'car-outline', name: 'Fab', redirectTo: '/fab' },
+    { icon: 'grid-outline', name: 'Grid', redirectTo: '/grid' }
+
   ]
 
   constructor() { }
