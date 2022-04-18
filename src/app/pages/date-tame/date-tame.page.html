@@ -1,0 +1,91 @@
+<app-headers titulo="Date Tame"></app-headers>
+
+<ion-content>
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>Datos de nacimiento</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Fecha de nacimiento</ion-label>
+      <ion-input value="{{ fechaNac.toISOString() | date: 'dd YYYY MMMM' }}" id="date" class="ion-text-end"></ion-input>
+      <!-- <ion-datetime [value]="fechaNac.toISOString()" display-format="DD YYYY MMMM" (ionChange)="cambioFecha($event)">
+      </ion-datetime> -->
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>Restricciones</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Min y Max</ion-label>
+      <ion-input value="{{dateValue2.toISOString() | date: 'dd YYYY MMMM'  }}" id="open-date-input-2"
+        class="ion-text-end"></ion-input>
+      <ion-popover trigger="open-date-input-2" show-backdrop="false">
+        <ng-template>
+          <ion-datetime #popoverDatetime2 presentation="date" min="2015-01-01" max="2025-12-31"
+            (ionChange)="dateValue2 = formatDate(popoverDatetime2.value)"></ion-datetime>
+        </ng-template>
+      </ion-popover>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Specific days/months/years and show clear button</ion-label>
+      <ion-input value="{{dateValue2.toISOString() | date: 'dd YYYY MMMM'  }}" id="open-date-input-3"
+        class="ion-text-end"></ion-input>
+      <ion-popover trigger="open-date-input-3" show-backdrop="false">
+        <ng-template>
+          <ion-datetime #popoverDatetime3 presentation="date" monthValues="6,7,8" yearValues="2014,2015"
+            dayValues="01,02,03,04,05,06,08,09,10,11,12,13,14"
+            (ionChange)="dateValue2 = formatDate(popoverDatetime3.value)" [showClearButton]="true">
+          </ion-datetime>
+        </ng-template>
+      </ion-popover>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Time only</ion-label>
+      <ion-input value="{{dateValue2.toISOString() | date: 'dd YYYY MMMM'  }}" id="open-date-input-4"
+        class="ion-text-end"></ion-input>
+      <ion-popover trigger="open-date-input-4" show-backdrop="false">
+        <ng-template>
+          <ion-datetime #popoverDatetime4 presentation="time"
+            (ionChange)="dateValue2 = formatDate(popoverDatetime4.value)" [showClearButton]="true">
+          </ion-datetime>
+        </ng-template>
+      </ion-popover>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Selecting time first, date second </ion-label>
+      <ion-input value="{{dateValue2.toISOString() | date: 'dd YYYY MMMM : HH mm ss'  }}" id="open-date-input-5"
+        class="ion-text-end"></ion-input>
+      <ion-popover trigger="open-date-input-5" show-backdrop="false">
+        <ng-template>
+          <ion-datetime #popoverDatetime5 presentation="time-date"
+            (ionChange)="dateValue2 = formatDate2(popoverDatetime5.value)" [showClearButton]="true">
+          </ion-datetime>
+        </ng-template>
+      </ion-popover>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Selecting time first, date second </ion-label>
+      <ion-input value="{{dateValue2.toISOString() | date: 'dd YYYY MMMM : HH mm ss'  }}" id="open-date-input-6"
+        class="ion-text-end"></ion-input>
+      <ion-popover trigger="open-date-input-6" show-backdrop="false">
+        <ng-template>
+          <ion-datetime #popoverDatetime6 presentation="date"
+            (ionChange)="dateValue2 = formatDate2(popoverDatetime6.value)">
+            <ion-buttons slot="buttons">
+              <ion-button (click)="confirm()">Good to go!</ion-button>
+              <ion-button (click)="reset()">Reset</ion-button>
+            </ion-buttons>
+          </ion-datetime>
+        </ng-template>
+      </ion-popover>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
