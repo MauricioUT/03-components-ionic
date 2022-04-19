@@ -1,0 +1,74 @@
+<app-headers titulo="Input Forms"></app-headers>
+
+<ion-content class="ion-padding">
+    <!-- <h3>Default Input</h3>
+    <ion-input></ion-input>
+    <h3>Input with value</h3>
+    <ion-input value="custom"></ion-input>
+    <h3>Input with placeholder</h3>
+    <ion-input placeholder="Enter Input"></ion-input>
+
+    <h3>Input with clear button when there is a value </h3>
+    <ion-input clearInput value="clear me"></ion-input>
+
+    <h3>Number type input</h3>
+    <ion-input type="number" value="333"></ion-input>
+
+    <h3>Disabled input</h3>
+    <ion-input value="Disabled" disabled></ion-input>
+
+    <h3>Readonly input</h3>
+    <ion-input value="Readonly" readonly></ion-input>
+
+    <h3>Inputs with labels</h3>
+    <ion-item>
+        <ion-label>Default Label</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Floating Label</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="fixed">Fixed Label</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Stacked Label</ion-label>
+        <ion-input></ion-input>
+    </ion-item> -->
+    <ion-list>
+        <ion-list-header>
+            <ion-label>Input Normal</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label>Nombre:</ion-label>
+            <ion-input type="text" placeholder="Awesome Input" [value]="nombre"></ion-input>
+            <!--Se puede aplicar formularios por template, reactivos o uso del ngModel-->
+        </ion-item>
+    </ion-list>
+
+    <form #formulario="ngForm" (ngSubmit)="onSubmit(formulario)">
+        <!--uso del FormsModule-->
+        <ion-list-header>
+            <ion-label>Formulario Valido: {{formulario.valid}}</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label>Email:</ion-label>
+            <ion-input type="email" placeholder="Escriba su email aquí" required name="email"
+                [(ngModel)]="usuario.email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+            </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Contraseña: </ion-label>
+            <ion-input type="password" placeholder="Password" required name="password" [(ngModel)]="usuario.password"></ion-input>
+        </ion-item>
+
+        <ion-button type="submit" expand="block" [disabled]="formulario.invalid">
+            Log in
+        </ion-button>
+    </form>
+</ion-content>

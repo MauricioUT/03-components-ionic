@@ -23,7 +23,8 @@ export class InicioPage implements OnInit {
     { icon: 'calendar-outline', name: 'Date Tame', redirectTo: '/date-tame' },
     { icon: 'car-outline', name: 'Fab', redirectTo: '/fab' },
     { icon: 'grid-outline', name: 'Grid', redirectTo: '/grid' },
-    { icon: 'infinite-outline', name: 'Infinite Scroll', redirectTo: '/infinite-scroll' }
+    { icon: 'infinite-outline', name: 'Infinite Scroll', redirectTo: '/infinite-scroll' },
+    { icon: 'hammer-outline', name: 'Input', redirectTo: '/input' }
   ]
 
   constructor() { }
