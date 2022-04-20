@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="primary">List - Reorder</ion-title>
+    <ion-buttons slot="primary">
+      <!-- <ion-button (click)="onReorder()"> -->
+        <ion-button (click)="reorder = !reorder">
+        TOGGLE
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-list>
+    <ion-reorder-group [disabled]=reorder (ionItemReorder)="doReorder($event)"><!--Envuelve  todas las opciones que se tendra, este selector dispara un evento que dice cuando se movio un elemento de la lista-->
+      <ion-item *ngFor="let personaje of personajes">
+        <ion-label>{{personaje}}</ion-label>
+        <ion-reorder slot="start"><!--Añade el icono que tendra el ordenamiento-->
+          <ion-icon name="pizza"></ion-icon><!--Si no se le coloca icono pone uno por default-->
+        </ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+
+  </ion-list>
+</ion-content>
