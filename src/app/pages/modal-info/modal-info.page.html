@@ -1,11 +1,14 @@
-<!-- <ion-header>
+<ion-header>
   <ion-toolbar>
-    <ion-title>Modal page</ion-title>
+    <ion-title>{{nombre}} -  {{pais}}</ion-title>
   </ion-toolbar>
-</ion-header> --><!--en los modales es opcional colocar el header-->
+</ion-header><!--en los modales es opcional colocar el header-->
 
 <ion-content class="ion-padding">
   <ion-button (click)="salirSinArgs()" expand="block">
     Salir sin argumentos
+  </ion-button>
+  <ion-button (click)="salirConArgs()" expand="block">
+    Salir con argumentos
   </ion-button>
 </ion-content>
