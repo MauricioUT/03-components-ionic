@@ -28,3 +28,7 @@
 .rojo, .rojo .sc-ion-action-sheet-md{ // para aplicar un estilo en material desing ya que en ios lo tiene aplicado
     color: red !important;
 }
+
+ion-item{
+    --background: transparent	
+}

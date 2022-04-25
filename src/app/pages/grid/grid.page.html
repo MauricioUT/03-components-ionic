@@ -1,6 +1,6 @@
 <app-headers titulo="Grid"></app-headers>
 
-<ion-content>
+<ion-content class="ion-padding" fullscreen><!--para hacer la transparencia del header-->
   <ion-grid fixed> <!--con fixed mantendra el ancho de las tarjetas dependiendo las dimenciones del dispositivo, asi como agregarle un padding-->
     <ion-row>
       <ion-col size="12" size-lg="3" size-md="4" size-sm="6" *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1]"> <!--size-lg define el tamaño de la columna de la pantallas muy grandes, aplica las que necesita si no aplicara la de size-->
