@@ -2,16 +2,19 @@
   <ion-menu side="start" menuId="first" contentId="main">
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Start Menu</ion-title>
+        <ion-title>Componentes</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
+        <ion-menu-toggle *ngFor="let componente of componentes | async"><!--Sirve para cerrar el togle cuando alguien toca un opcion del menu-->
+          <ion-item [routerLink]="componente.redirectTo" detail="true"><!--con detail = 'true' o solo detail, hace que le agregue una flecha al final que indica que se puede clickera, ios lo incluye por default-->
+            <ion-icon slot="start" [name]="componente.icon"></ion-icon>
+            <ion-label>
+              {{componente.name}}
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>
