@@ -1,0 +1,74 @@
+<app-headers titulo="Progress - Range "></app-headers>
+<ion-content class="ion-padding">
+  <h3>Default Progressbar</h3>
+  <ion-progress-bar></ion-progress-bar>
+
+  <h3>Default Progressbar with 50 percent</h3>
+  <ion-progress-bar value="0.5"></ion-progress-bar>
+  <!--El progres bar trabaja con valores entre 0 y 1-->
+
+  <h3>Colorize Progressbar</h3>
+  <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+  <ion-progress-bar color="secondary" value="0.5"></ion-progress-bar>
+
+  <h3>types</h3>
+  <ion-progress-bar value="0.25" buffer="0.5"></ion-progress-bar>
+  <br>
+  <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  <br>
+  <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+  <h2>Custom</h2>
+  <h3>1</h3>
+  <ion-progress-bar type="determinate" value="0.42" buffer="0.5" reversed="true" color="primary"></ion-progress-bar>
+  <h3>2</h3>
+  <ion-progress-bar type="determinate" [value]="porcentaje" color="primary"></ion-progress-bar>
+
+  <ion-list>
+    <!--Usualmente este tipo de elementos o inputs se colocan dentro dentro de una lista-->
+    <ion-item>
+      <ion-range min="0" max="100" step="2" (ionChange)="rangeChange($event)">
+        <ion-icon slot="start" size="small" name="sunny">-200</ion-icon>
+        <ion-icon slot="end" name="sunny" size="small"></ion-icon>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+  <h2>Range</h2>
+
+  <ion-list>
+    <ion-item>
+      <ion-range color="danger" [pin]="true"></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="-200" max="200" color="secondary">
+        <ion-label slot="start">-200</ion-label>
+        <ion-label slot="end">200</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="20" max="80" step="2">
+        <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+        <ion-icon slot="end" name="sunny"></ion-icon>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="1000" max="2000" step="100" snaps="true" color="secondary"></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="1000" max="2000" step="100" snaps="true" ticks="false" color="secondary"></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range dualKnobs="true" min="21" max="72" step="3" snaps="true"></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="0" max="100" [pinFormatter]="customFormatter" [pin]="true"></ion-range>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
