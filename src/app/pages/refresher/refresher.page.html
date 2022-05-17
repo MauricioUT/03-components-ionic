@@ -1,0 +1,37 @@
+<app-headers titulo="Refresher"></app-headers>
+
+<ion-content>
+  <!--Comunmente el refresher  va al final del contenido, contrario al infinite scroll-->
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <!-- Default Refresher -->
+  <!-- <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  </ion-content> -->
+
+  <!-- Custom Refresher Properties -->
+  <!-- <ion-content>
+    <ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  </ion-content> -->
+
+  <!-- Custom Refresher Content -->
+  <!-- <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content pullingIcon="chevron-down-circle-outline" pullingText="Pull to refresh"
+        refreshingSpinner="circles" refreshingText="Refreshing...">
+      </ion-refresher-content>
+    </ion-refresher>
+  </ion-content> -->
+
+  <ion-list>
+    <ion-item *ngFor="let item of items; let i = index" class="animate__animated animate__fadeIn animate_faster">
+      <ion-label>Item: {{i + 1}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

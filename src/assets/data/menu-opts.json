@@ -15,5 +15,6 @@
     { "icon": "refresh-circle-outline", "name": "Loading", "redirectTo": "/loading" },
     { "icon": "phone-portrait-outline", "name": "Modal", "redirectTo": "/modal" },
     { "icon": "tablet-portrait-outline", "name": "Pop over", "redirectTo": "/popover" },
-    { "icon": "code-working-outline", "name": "Progressbar", "redirectTo": "/progress" }
+    { "icon": "code-working-outline", "name": "Progressbar", "redirectTo": "/progress" },
+    { "icon": "arrow-down-circle-outline", "name": "Refresher", "redirectTo": "/refresher" }
   ]

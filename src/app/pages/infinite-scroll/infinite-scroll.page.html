@@ -7,6 +7,7 @@
     </ion-item>
   </ion-list>
 
+  <!--Comunmente el infinite scroll va al final del contenido, contrario al refresher-->
   <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)" [disabled]="false"><!--el threshold emite un evento cuando se le hace scroll hacia abajo y callback(ionInfinite) lo cacha, con el disabled en true se le indica que no se ejecute el spinner-->
     <ion-infinite-scroll-content
       loadingSpinner="crescent"
