@@ -91,6 +91,10 @@ const routes: Routes = [
   {
     path: 'segment',
     loadChildren: () => import('./pages/segment/segment.module').then( m => m.SegmentPageModule)
+  },
+  {
+    path: 'skeleton-text',
+    loadChildren: () => import('./pages/skeleton-text/skeleton-text.module').then( m => m.SkeletonTextPageModule)
   }
 
 ];
