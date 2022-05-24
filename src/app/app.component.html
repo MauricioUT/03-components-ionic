@@ -1,22 +1,24 @@
-<ion-app>
-  <ion-menu side="start" menuId="first" contentId="main">
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Componentes</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-menu-toggle *ngFor="let componente of componentes | async"><!--Sirve para cerrar el togle cuando alguien toca un opcion del menu-->
-          <ion-item [routerLink]="componente.redirectTo" detail="true"><!--con detail = 'true' o solo detail, hace que le agregue una flecha al final que indica que se puede clickera, ios lo incluye por default-->
-            <ion-icon slot="start" [name]="componente.icon"></ion-icon>
-            <ion-label>
-              {{componente.name}}
-            </ion-label>
-          </ion-item>
-        </ion-menu-toggle>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-  <ion-router-outlet id="main"></ion-router-outlet>  <!--el id hace referencia al ion-menu-->
+<ion-app><!--el  split pane nos sirve para optimizar los espacios entre los dispositivos como ipadas o moviles, debe de envolver el nivel mas alto de la aplicacion es decir desde el app.component.html-->
+  <ion-split-pane when="md" contentId="main"><!--el when define cuando aplicara el split pane, y el content id debe de estar relacionado con el-->
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Componentes</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list><!--autoHide = false, nos ayuda a hacerlo funcionar con el ion-split-pane, y asi muestre las opciones -->
+          <ion-menu-toggle *ngFor="let componente of componentes | async" autoHide="false"><!--Sirve para cerrar el togle cuando alguien toca un opcion del menu-->
+            <ion-item [routerLink]="componente.redirectTo" detail="true"><!--con detail = 'true' o solo detail, hace que le agregue una flecha al final que indica que se puede clicker, ios lo incluye por default-->
+              <ion-icon slot="start" [name]="componente.icon"></ion-icon>
+              <ion-label>
+                {{componente.name}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>  <!--el id hace referencia al ion-menu-->
+  </ion-split-pane>
 </ion-app>
