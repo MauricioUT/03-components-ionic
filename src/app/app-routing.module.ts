@@ -95,6 +95,10 @@ const routes: Routes = [
   {
     path: 'skeleton-text',
     loadChildren: () => import('./pages/skeleton-text/skeleton-text.module').then( m => m.SkeletonTextPageModule)
+  },
+  {
+    path: 'slides',
+    loadChildren: () => import('./pages/slides/slides.module').then( m => m.SlidesPageModule)
   }
 
 ];

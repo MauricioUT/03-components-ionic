@@ -19,5 +19,6 @@
     { "icon": "arrow-down-circle-outline", "name": "Refresher", "redirectTo": "/refresher" },
     { "icon": "search-outline", "name": "Search", "redirectTo": "/search" },
     { "icon": "copy-outline", "name": "Segment", "redirectTo": "/segment" },
-    { "icon": "battery-full-outline", "name": "Skeleton Text", "redirectTo": "/skeleton-text" }
+    { "icon": "battery-full-outline", "name": "Skeleton Text", "redirectTo": "/skeleton-text" },
+    { "icon": "albums-outline", "name": "Slides", "redirectTo": "/slides" }
   ]
