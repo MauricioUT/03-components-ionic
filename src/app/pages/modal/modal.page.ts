@@ -28,7 +28,7 @@ export class ModalPage implements OnInit {
     // console.log(data);
     // console.log('onDidDismiss'); // la informacion aparece cuando se cierra el modal de la animacion
     const { data } = await modal.onWillDismiss(); //se dispare antes de que empiece a hacerce la animacion del modal
-    console.log(data);
+    console.log(JSON.stringify(data)); //esto nos ayuda para poder visualizar los logs en android studio  
     console.log('onWillDismiss');
   }
 }
